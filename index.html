@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SebCapital</title>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <h1>SebCapital: Build Wealth Early</h1>
+
+    <div id="auth-section">
+      <input id="email" placeholder="Email" />
+      <input id="password" placeholder="Password" type="password" />
+      <button onclick="signup()">Sign Up</button>
+      <button onclick="login()">Log In</button>
+    </div>
+
+    <div id="survey-section" style="display:none;">
+      <h2>Financial Survey</h2>
+      <input id="income" placeholder="Monthly Income" />
+      <input id="expenses" placeholder="Monthly Expenses" />
+      <input id="age" placeholder="Age" />
+      <input id="goal" placeholder="Primary Financial Goal" />
+      <button onclick="submitSurvey()">Submit Survey</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <h2>Dashboard</h2>
+      <p id="summary"></p>
+      <h3>Add a Goal</h3>
+      <input id="new-goal" placeholder="e.g. Save $1000" />
+      <button onclick="addGoal()">Add</button>
+      <ul id="goal-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
